@@ -18,17 +18,23 @@ public class Romain {
 		System.out.println(prendreParole() + "« " + texte + "»");
 	}
 
-	private String prendreParole() {
+	public String prendreParole() {
 		return "Le romain " + nom + " : ";
 	}
 
 	public void recevoirCoup(int forceCoup) {
-		force -= forceCoup;
-		if (force > 0) {
-			parler("Aïe");
-		} else {
-			parler("J'abandonne...");
-		}
+	    this.force -= forceCoup; // Simulez la diminution de la résistance en fonction de la force du coup
+	    if (this.force <= 0) {
+	        System.out.println("Le romain " + nom + " : « J'abandonne...»");
+	    } else {
+	        System.out.println("Le romain " + nom + " : « Aïe»");
+	    }
+	}
+
+
+	public void frapper(String string) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }
